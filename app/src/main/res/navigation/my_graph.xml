@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_graph"
+    app:startDestination="@id/add_Employee_Fragment">
+
+    <fragment
+        android:id="@+id/add_Employee_Fragment"
+        android:name="com.example.roomdata.Add_Employee_Fragment"
+        android:label="Add Employee"
+        tools:layout="@layout/fragment_add__employee_" >
+        <action
+            android:id="@+id/action_add_Employee_Fragment_to_show_Employee_Fragment"
+            app:destination="@id/show_Employee_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/show_Employee_Fragment"
+        android:name="com.example.roomdata.Show_Employee_Fragment"
+        android:label="Show Employee"
+        tools:layout="@layout/fragment_show__employee_" >
+        <action
+            android:id="@+id/action_show_Employee_Fragment_to_add_Employee_Fragment"
+            app:destination="@id/add_Employee_Fragment" />
+    </fragment>
+</navigation>
