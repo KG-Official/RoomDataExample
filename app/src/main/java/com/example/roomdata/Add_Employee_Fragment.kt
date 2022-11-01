@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.fragment.findNavController
 import com.example.roomdata.databinding.ActivityMainBinding
 import com.example.roomdata.databinding.FragmentAddEmployeeBinding
 import com.google.android.material.textfield.TextInputEditText
@@ -38,6 +39,8 @@ class Add_Employee_Fragment : Fragment() {
             view.findViewById<TextInputEditText>(R.id.Last_name).setText("")
             view.findViewById<TextInputEditText>(R.id.num).setText("")
             view.findViewById<TextInputEditText>(R.id.address).setText("")
+
+            findNavController().navigate(R.id.action_add_Employee_Fragment_to_show_Employee_Fragment)
 
         }
 
